@@ -9,7 +9,6 @@ app.use(express.static(publicPath));
 
 app.get("/", (req, res) => {
     res.send(path.join(publicPath, "index.html"));
-    //res.send("../public/index.html");
 }); 
 
 
