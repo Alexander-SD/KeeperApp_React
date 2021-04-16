@@ -8,13 +8,13 @@ import InputArea from "./InputArea";
 
 function App() {
   const [newNotes, setNewNotes] = useState([]);
-
+  
   function addNewNote (input) {
     setNewNotes(prevNotes => {
       return [...prevNotes, input];
     });
   }
-
+  
   function deleteNote (id) {
     setNewNotes(prevValue => {
       return (prevValue.filter((noteItem, index) => {
@@ -22,8 +22,9 @@ function App() {
       }));
     });
   }
+  
 
-  return  <div>
+return  <div>
         <Header />
           <InputArea addNewNote={addNewNote} />
         {newNotes.map( (note, index) => (
