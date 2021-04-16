@@ -26,14 +26,14 @@ function App() {
 
 return  <div>
         <Header />
-          <InputArea addNewNote={addNewNote} />
+        <InputArea addNewNote={addNewNote} />
         {newNotes.map( (note, index) => (
         <Note 
          key={index}
          id={index} 
          title={note.title} 
          content={note.content}
-         deleteNote={deleteNote} 
+         deleteNote={deleteNote}
         />
         ))}
         <Footer />
