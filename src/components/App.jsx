@@ -8,36 +8,36 @@ import InputArea from "./InputArea";
 
 function App() {
   const [newNotes, setNewNotes] = useState([]);
-  
-  function addNewNote (input) {
+
+  function addNewNote(input) {
     setNewNotes(prevNotes => {
       return [...prevNotes, input];
     });
   }
-  
-  function deleteNote (id) {
+
+  function deleteNote(id) {
     setNewNotes(prevValue => {
       return (prevValue.filter((noteItem, index) => {
         return index !== id;
       }));
     });
   }
-  
 
-return  <div>
-        <Header />
-        <InputArea addNewNote={addNewNote} />
-        {newNotes.map( (note, index) => (
-        <Note 
-         key={index}
-         id={index} 
-         title={note.title} 
-         content={note.content}
-         deleteNote={deleteNote}
-        />
-        ))}
-        <Footer />
-    </div>
+
+  return <div>
+    <Header />
+    <InputArea addNewNote={addNewNote} />
+    {newNotes.map((note, index) => (
+      <Note
+        key={index}
+        id={index}
+        title={note.title}
+        content={note.content}
+        deleteNote={deleteNote}
+      />
+    ))}
+    <Footer />
+  </div>
 }
 
 export default App;
