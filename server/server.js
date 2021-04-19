@@ -5,7 +5,6 @@ const app = express();
 
 const publicPath = path.join(__dirname, "..", "build");
 
-const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 
@@ -16,7 +15,11 @@ app.get("*", (req, res) => {
 
 
 
+let port = process.env.PORT || 3000;
+if (port == null || port == "") {
+  port = 8000;
+}
 
-app.listen(port , () => 
+app.listen(port, () => 
 console.log("Server is running on port " + port))
 

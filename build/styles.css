@@ -1,4 +1,6 @@
-* {
+*,
+::before,
+::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -36,7 +38,21 @@ footer {
 footer p {
   color: #ccc;
 }
+
+@keyframes fade-in {
+  from {opacity: 0; transform: scale(0);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fade-out {
+  from {opacity: 1; transform: scale(1);}
+  to {opacity: 0; transform: scale(0);}
+}
+
 .note {
+  animation-name: fade-in;
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.8,-0.57, 0.4, 1.36);
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
@@ -45,10 +61,12 @@ footer p {
   margin: 16px;
   float: left;
 }
+
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
 }
+
 .note p {
   font-size: 1.1em;
   margin-bottom: 10px;
@@ -87,6 +105,11 @@ form.create-note textarea {
   font-family: inherit;
   resize: none;
 }
+
+textarea {
+  height: 3em;
+}
+
 form.create-note button {
   position: absolute;
   right: 18px;
@@ -101,3 +124,34 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
+
+.expand-enter {
+  height: 1.65em;
+}
+
+.expand-enter-active {
+  animation-name: expand-in;
+  animation-duration: 300ms;
+  animation-timing-function: cubic-bezier(0.42, 0.16, 0.28, 1.89);
+}
+
+@keyframes expand-in {
+  from {height: 1.65em;}
+  to {height: 3em;}
+}
+
+/* .expand-exit {
+  height: 3em;
+} 
+
+.expand-exit-active {
+  animation-name: expand-out;
+  animation-duration: 2000ms;
+  animation-timing-function: cubic-bezier(0.8,-0.57, 0.4, 1.36);
+} */
+
+
+/* @keyframes expand-out {
+  from {height: 3em;}
+  to {height: 1.65em;}
+} */
