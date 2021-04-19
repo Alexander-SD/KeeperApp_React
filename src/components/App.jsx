@@ -7,7 +7,7 @@ import InputArea from "./InputArea";
 
 
 function App() {
-  const [newNotes, setNewNotes] = useState([]);
+  const [newNotes, setNewNotes] = useState(notes);
 
   function addNewNote(input) {
     setNewNotes(prevNotes => {

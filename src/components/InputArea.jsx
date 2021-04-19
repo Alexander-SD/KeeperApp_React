@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
-import { CSSTransition } from "react-transition-group";
+//import { CSSTransition } from "react-transition-group";
 
 function InputArea(props) {
     const [input, setInput] = useState({
