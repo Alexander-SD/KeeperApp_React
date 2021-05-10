@@ -36,7 +36,7 @@ function App() {
         deleteNote={deleteNote}
       />
     ))}
-    <Footer />
+    {/* <Footer /> */}
   </div>
 }
 
