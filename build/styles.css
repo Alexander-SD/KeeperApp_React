@@ -11,13 +11,13 @@ html {
 body {
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 header {
   background-color: #f5ba13;
-  margin: auto -16px;
-  padding: 16px 32px;
+  margin: auto -1rem;
+  padding: 1rem 2rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -56,20 +56,20 @@ footer p {
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  width: 240px;
-  margin: 16px;
+  padding: .8rem;
+  width: 15rem;
+  margin: 1rem;
   float: left;
 }
 
 .note h1 {
   font-size: 1.1em;
-  margin-bottom: 6px;
+  margin-bottom: .4rem;
 }
 
 .note p {
   font-size: 1.1em;
-  margin-bottom: 10px;
+  margin-bottom: .8rem;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
@@ -88,18 +88,27 @@ footer p {
 
 form.create-note {
   position: relative;
-  width: 480px;
-  margin: 30px auto 20px auto;
+  width: 34%;
+  transition: width 500ms ease-in-out;
+  min-width: 30%;
+  margin: 1.8rem auto 1.2rem auto;
   background: #fff;
-  padding: 15px;
+  padding: 1rem;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
+
+@media (max-width: 700px) {
+  form.create-note {
+    width: 90%;
+  }
+}
+
 form.create-note input,
 form.create-note textarea {
   width: 100%;
   border: none;
-  padding: 4px;
+  padding: .2em;
   outline: none;
   font-size: 1.2em;
   font-family: inherit;
@@ -112,8 +121,8 @@ textarea {
 
 form.create-note button {
   position: absolute;
-  right: 18px;
-  bottom: -18px;
+  right: 1.1rem;
+  bottom: -1.1rem;
   background: #f5ba13;
   color: #fff;
   border: none;
